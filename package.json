@@ -1,0 +1,36 @@
+{
+  "name": "syncdata",
+  "version": "1.0.0",
+  "license": "ISC",
+  "author": "PETER ODILI",
+  "description": "Sync data component",
+  "type": "module",
+  "homepage": "https://github.com/ug-008/syncData#readme",
+  "scripts": {
+    "rollup": "rollup -c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ug-008/syncData.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ug-008/syncData/issues"
+  },
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^24.0.0",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-typescript": "^10.0.1",
+    "@types/react": "^18.0.26",
+    "react": "^18.2.0",
+    "rollup": "^3.9.1",
+    "rollup-plugin-dts": "^5.1.0",
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.4"
+  },
+  "main": "dist/cjs/index.js",
+  "module": "dist/esm/index.js",
+  "files": [
+    "dist"
+  ],
+  "types": "dist/index.d.ts"
+}
