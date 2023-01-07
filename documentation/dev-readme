@@ -1,0 +1,28 @@
+#### This project contains 3 basic dir as of date. 
+These includes:
+    1. documentation
+    2. package
+    3. test
+
+#### Test Dir
+For testing our package before publishing
+
+#### Documentation Dir
+This directory is the home for all project documentation
+
+#### Package Dir
+This directory contains all our dev resource files
+
+#### How to test package before publishing
+Step 1. Open terminal and change dir to <<package>>
+Step 2. Run the following command <<npm run rollup>>
+Step 3. Run the following command <<npm link>>
+# testing
+Step 4. Open another terminal and change dir to <<test>>
+Step 5. Run the following command <<npm link @__ugo__/syncdata>>
+Step 6. Run the following command <<npm run test>> or <<npm test>>
+
+#### How to publish our project on npm
+
+
+

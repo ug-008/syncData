@@ -1,0 +1,45 @@
+{
+  "name": "syncdata-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/test.index.tsx",
+  "keywords": [],
+  "author": "Peter Odili",
+  "license": "ISC",
+  "scripts": {
+    "test": "webpack-dev-server ."
+  },
+  "homepage": "https://github.com/ug-008/SmartBox#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ug-008/SmartBox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ug-008/SmartBox/issues"
+  },
+  "dependencies": {
+    "@__ugo__/syncdata": "^1.0.0",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.20.7",
+    "@babel/core": "^7.20.12",
+    "@babel/preset-env": "^7.20.2",
+    "@babel/preset-react": "^7.18.6",
+    "@babel/preset-typescript": "^7.18.6",
+    "@mui/material": "^5.11.3",
+    "@types/jest": "^29.2.5",
+    "@types/node": "^18.11.18",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.10",
+    "babel-loader": "^9.1.2",
+    "html-webpack-plugin": "^5.5.0",
+    "typescript": "^4.9.4",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  }
+}

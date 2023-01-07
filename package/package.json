@@ -1,5 +1,5 @@
 {
-  "name": "syncdata",
+  "name": "@__ugo__/syncdata",
   "version": "1.0.0",
   "license": "ISC",
   "author": "PETER ODILI",
@@ -29,8 +29,7 @@
   },
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
-  "files": [
-    "dist"
-  ],
+  "files": ["dist"],
+  "keywords": ["react", "components"],
   "types": "dist/index.d.ts"
 }
