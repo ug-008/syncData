@@ -5,13 +5,14 @@ interface ChangeEvent extends React.ChangeEvent<HTMLInputElement> {
 }
 
 function AddChangeEvent(__c__: any, updateSyncData: Function) {
-
+    
     /**
      * 
      */
     const [value, setValue] = React.useState(
         __c__.props.value || 
         __c__.props.defaultValue || 
+        __c__.props.defaultChecked ||
         ''
     )
 
@@ -35,8 +36,25 @@ function AddChangeEvent(__c__: any, updateSyncData: Function) {
             onChange: (e: ChangeEvent)=> {
                 if(!e.exit) {
                     e.exit = true
-                    setValue(e.target.value)
+
+                    var eValue,
+                        eType = e.target.type
+                    
+                    switch(eType) {
+                        case 'radio':
+                            console.log(e.target.name, '--', e.target.checked)
+                            if(e.target.checked)
+                                eValue = (e.target as HTMLInputElement).value
+                            break;
+                        case 'checkbox':
+                            eValue = (e.target as HTMLInputElement).value
+                            if(!eValue)
+                                eValue = e.target.checked
+                        default: eValue = e.target.value;
+                    }
+                    setValue(eValue)
                     defOnChangeProp?.(e)
+
                 }
             }
         }

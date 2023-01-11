@@ -2,6 +2,14 @@ import * as React from 'react'
 import SyncData from './SyncData'
 import { SyncDataProps } from './SyncDataProps';
 import TextField from '@mui/material/TextField'
+import Checkbox from '@mui/material/Checkbox';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
+import { SyncIgnore } from './SyncIgnore';
+import { SyncGroup } from './SyncGroup';
 
 export default function TestApp() {
     const syncRef= React.useRef<SyncDataProps>();
@@ -15,15 +23,24 @@ export default function TestApp() {
                 <div >
                     Sync data container
                 </div>
-                <input name='surname' value={''} pattern={''} />
-                <div>
-                    <input name='firstName' value={'Hi'} />
-                </div>
-                <TextField name='fullName' value={''} />
+                <SyncGroup 
+                    data-sync='nativeCheckBox' 
+                    singleChoice >
+                    <input type='checkbox' value='1'/><br/>
+                    <input type='checkbox' value='2'/><br/>
+                </SyncGroup>
+                <Checkbox
+                    name='muiCheckbox'
+                    sx={{
+                        '&.Mui-checked': {
+                        },
+                    }}
+                />
+                <br />
             </SyncData>
             <button 
                 onClick={()=> {
-                    syncRef.current?.validate?.()
+                    console.log(syncRef.current)
                 }}
             > 
                 Submit 
